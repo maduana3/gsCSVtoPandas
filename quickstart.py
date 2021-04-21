@@ -9,10 +9,9 @@ CREDS = service_account.Credentials.from_service_account_file(
         SERVICE_ACCOUNT_FILE, scopes=SCOPES)
 
 # The ID and range of a sample spreadsheet.
-SPREADSHEET_ID = '1jsNf2QJCawgQYHCc4_UF1pX5yfsy4aOmxISbWfdoDZU'
-DATA_TO_PULL = 'sheet1'
+SPREADSHEET_ID = '' #sheetID goes here
+DATA_TO_PULL = '' #sheetname goes here
 
-# Call the Sheets API
 def pull_sheet_data(SCOPES,SPREADSHEET_ID,DATA_TO_PULL,CREDS):
     service = build('sheets', 'v4', credentials=CREDS)
     sheet = service.spreadsheets()
